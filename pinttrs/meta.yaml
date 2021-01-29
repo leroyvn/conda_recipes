@@ -1,0 +1,48 @@
+{% set name = "pinttrs" %}
+{% set version = "0.1.0.dev2" %}
+
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pinttrs-{{ version }}.tar.gz
+  sha256: 1e4f33683c011b9d8d6e16cc540fe6cf5bfe51ac227af82870c32e01f1782d77
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - attrs
+    - pint
+    - python
+
+test:
+  imports:
+    - pinttrs
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/leroyvn/pinttrs
+  doc_url: https://pinttrs.readthedocs.io
+  license: MIT
+  summary: Pint meets attrs
+  description: |
+    The amazing attrs library is a game-changer when it comes to writing classes. 
+    Its initialisation sequence notably allows for automated conversion and v
+    erification of attribute values. This package is an attempt at designing a 
+    system to apply units automatically and reliably to attributes with Pint.
+
+extra:
+  recipe-maintainers:
+    - leroyvn
