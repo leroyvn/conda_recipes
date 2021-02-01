@@ -11,6 +11,11 @@
    ```
    conda build <package>
    ```
+   You might have to add extra channels to this command to correctly resolve dependencies.
+   Example:
+   ```
+   conda build -c conda-forge <package>
+   ```
 4. Upload to Anaconda Cloud
    ```
    anaconda upload <path_to_created_package>
