@@ -20,6 +20,8 @@
    ```
    anaconda upload <path_to_created_package>
    ```
+   Want to upload to an organisation you're a member of? Use the 
+   [`--user` flag](https://docs.anaconda.com/anacondaorg/user-guide/tasks/work-with-organizations/#uploading-packages-to-an-organization).
 
 **Resources**
 
