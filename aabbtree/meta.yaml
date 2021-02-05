@@ -1,0 +1,42 @@
+{% set name = "aabbtree" %}
+{% set version = "2.6.2" %}
+
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aabbtree-{{ version }}.tar.gz
+  sha256: 91b258dbbdd426f476adfad4390bc4dceff62e987e086a5ea0c9f06552da2f26
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - aabbtree
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/kip-hart/AABBTree
+  doc_url: https://aabbtree.readthedocs.io/
+  summary: Pure Python implementation of d-dimensional AABB tree.
+  license: MIT
+  license_file: LICENSE.rst
+
+extra:
+  recipe-maintainers:
+    - leroyvn
