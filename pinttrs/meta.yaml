@@ -1,5 +1,5 @@
 {% set name = "pinttrs" %}
-{% set version = "21.1.0" %}
+{% set version = "21.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pinttrs-{{ version }}.tar.gz
-  sha256: 934e01dc56444c06d436528a8f2682956d797c747a97c3051ce6125ca989ab00
+  sha256: c9817914fd6981ab1b7d83e93aaa36d98b07d311a5b543c67752189d5750b767
 
 build:
   number: 0
@@ -38,9 +38,9 @@ about:
   license: MIT
   summary: Pint meets attrs
   description: |
-    The amazing attrs library is a game-changer when it comes to writing classes. 
-    Its initialisation sequence notably allows for automated conversion and 
-    verification of attribute values. This package is an attempt at designing a 
+    The amazing attrs library is a game-changer when it comes to writing classes.
+    Its initialisation sequence notably allows for automated conversion and
+    verification of attribute values. This package is an attempt at designing a
     system to apply units automatically and reliably to attributes with Pint.
 
 extra:
