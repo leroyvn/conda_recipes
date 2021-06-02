@@ -1,5 +1,5 @@
 {% set name = "aabbtree" %}
-{% set version = "2.6.2" %}
+{% set version = "2.8.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aabbtree-{{ version }}.tar.gz
-  sha256: 91b258dbbdd426f476adfad4390bc4dceff62e987e086a5ea0c9f06552da2f26
+  sha256: dec509bdf12c07819e5f9de226f2dbb62eae8f376d5aebb82929905a84738e92
 
 build:
   number: 0

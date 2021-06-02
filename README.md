@@ -4,7 +4,7 @@
 
 1. Install conda-build and anaconda to your base Conda env:
    ```
-   conda install conda-build anaconda 
+   conda install conda-build anaconda
    ```
 2. Use [Grayskull](https://www.marcelotrevisani.com/grayskull) to create a new recipe file and fine-tune it.
 3. Build the recipe:
@@ -20,7 +20,7 @@
    ```
    anaconda upload <path_to_created_package>
    ```
-   Want to upload to an organisation you're a member of? Use the 
+   Want to upload to an organisation you're a member of? Use the
    [`--user` flag](https://docs.anaconda.com/anacondaorg/user-guide/tasks/work-with-organizations/#uploading-packages-to-an-organization).
 
 **Resources**
