@@ -4,7 +4,7 @@
 
 1. Install conda-build and anaconda to your base Conda env:
    ```
-   conda install conda-build anaconda
+   conda install conda-build anaconda-client
    ```
 2. Use [Grayskull](https://www.marcelotrevisani.com/grayskull) to create a new recipe file and fine-tune it.
 3. Build the recipe:
@@ -26,3 +26,4 @@
 **Resources**
 
 - [Building conda packages with conda skeleton](https://conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs-skeleton.html)
+- [Working with packages](https://docs.anaconda.com/anacondaorg/user-guide/tasks/work-with-packages/)
