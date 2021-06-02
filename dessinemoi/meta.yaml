@@ -1,0 +1,46 @@
+{% set name = "dessinemoi" %}
+{% set version = "21.1.0" %}
+
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dessinemoi-{{ version }}.tar.gz
+  sha256: a3a845122bc816384afe5430ed4d5c7888f313436fcca06fc5f599a64fb51a78
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - attrs
+    - python
+
+test:
+  imports:
+    - dessinemoi
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/leroyvn/dessinemoi
+  doc_url: https://dessinemoi.readthedocs.io
+  license: MIT
+  summary: A simple Python factory system
+  description: |
+    Dessine-moi is a simple Python implementation of the factory pattern. It was
+    born from the need to create dynamically object trees from nested
+    dictionaries (e.g. a JSON document).
+
+extra:
+  recipe-maintainers:
+    - leroyvn
