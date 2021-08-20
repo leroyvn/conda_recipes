@@ -2,16 +2,16 @@
 
 ## Create a new recipe for a pure Python package on PyPI
 
-1. Install conda-build and anaconda to your base Conda env:
+1. Install conda-build, anaconda and grayskull to your base Conda env:
    ```
    conda install conda-build anaconda-client grayskull
    ```
    **Note**: I personally prefer using [Boa](https://github.com/mamba-org/boa) and a dedicated Conda env:
    ```
    conda create --name conda-build
-   conda install conda-build boa anaconda-client
+   conda install conda-build boa anaconda-client grayskull
    ```
-2. Use [the Grayskull online interface](https://www.marcelotrevisani.com/grayskull) to create a new recipe file and fine-tune it. Alternatively, you can also use the [command-line interface](https://github.com/conda-incubator/grayskull) for that purpose:
+2. Use [the grayskull online interface](https://www.marcelotrevisani.com/grayskull) to create a new recipe file and fine-tune it. Alternatively, you can also use the [command-line interface](https://github.com/conda-incubator/grayskull) for that purpose:
    ```
    grayskull pypi <package>
    ```
