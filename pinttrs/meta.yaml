@@ -1,5 +1,5 @@
 {% set name = "pinttrs" %}
-{% set version = "21.2.0" %}
+{% set version = "21.3.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pinttrs-{{ version }}.tar.gz
-  sha256: c9817914fd6981ab1b7d83e93aaa36d98b07d311a5b543c67752189d5750b767
+  sha256: 4d06218461a6eb2fe8f68d4f75dc3c8868598fcb04c3c22a67e19be36ad6d20e
 
 build:
   number: 0
@@ -19,6 +19,7 @@ requirements:
   host:
     - pip
     - python
+    - poetry
   run:
     - attrs
     - pint
