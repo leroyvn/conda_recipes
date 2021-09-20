@@ -9,7 +9,7 @@
    **Note**: I personally prefer using [Boa](https://github.com/mamba-org/boa) and a dedicated Conda env:
    ```
    conda create --name conda-build
-   conda install conda-build boa anaconda-client grayskull
+   conda install -c conda-forge conda-build boa anaconda-client grayskull
    ```
 2. Use [the grayskull online interface](https://www.marcelotrevisani.com/grayskull) to create a new recipe file and fine-tune it. Alternatively, you can also use the [command-line interface](https://github.com/conda-incubator/grayskull) for that purpose:
    ```
