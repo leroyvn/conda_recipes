@@ -1,0 +1,49 @@
+{% set name = "hitran-api" %}
+{% set version = "1.1.2.0" %}
+
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hitran-api-{{ version }}.tar.gz
+  sha256: 044ad1bdf6caf48ae6cc9e3e26ffbe852095da01b04b931e6275f681ff933f65
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python
+    - numpy
+    - setuptools
+  run:
+    - numpy
+    - python
+    - setuptools
+
+test:
+  imports:
+    - hapi
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://pypi.org/project/hitran-api/
+  license: MIT
+  summary: HITRAN Application Programming Interface (HAPI)
+  description: |
+    The HITRAN Application Programming Interface (HAPI) [1] is a set of routines
+    in Python which aims to provide remote access to functionality and data 
+    given by the HITRANonline. At the present time, the API can download, 
+    filter and process line-by-line transition data.
+
+extra:
+  recipe-maintainers:
+    - nollety
