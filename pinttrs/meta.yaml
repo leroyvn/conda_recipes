@@ -1,6 +1,5 @@
 {% set name = "pinttrs" %}
-{% set version = "21.3.1" %}
-
+{% set version = "22.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pinttrs-{{ version }}.tar.gz
-  sha256: 7fad4712db2a6a769b7b4455b9dbd38a54f1771fec4757cbe47d7fd6ede5efff
+  sha256: e0c72f22ac9113f1d402e0474e5749f33fe5aa7349abfa5841a5a17a5dcb56d8
 
 build:
   number: 0
@@ -18,12 +17,12 @@ build:
 requirements:
   host:
     - pip
-    - python
-    - poetry
+    - python >=3.7
+    - pdm
   run:
-    - attrs
-    - pint
-    - python
+    - attrs >=21
+    - pint >=0.16
+    - python >=3.7
 
 test:
   imports:
@@ -37,6 +36,7 @@ about:
   home: https://github.com/leroyvn/pinttrs
   doc_url: https://pinttrs.readthedocs.io
   license: MIT
+  license_file: LICENSE
   summary: Pint meets attrs
   description: |
     The amazing attrs library is a game-changer when it comes to writing classes.
