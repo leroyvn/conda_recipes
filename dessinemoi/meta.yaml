@@ -10,18 +10,18 @@ source:
   sha256: 7f3a7ca70200e3d189d2e8d17e7480f01182fe7d30a6b7d4f66d8fa581eb43ad
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - pip <22.2  # Build breaks otherwise
     - python >=3.7
-    - pdm
+    - pdm-pep517
+    - pip
   run:
-    - attrs >=21
     - python >=3.7
+    - attrs >=21
 
 test:
   imports:
