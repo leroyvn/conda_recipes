@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -36,9 +36,9 @@ test:
 about:
   home: https://github.com/rayference/pinttrs
   doc_url: https://pinttrs.readthedocs.io
+  summary: Pint meets attrs
   license: MIT
   license_file: LICENSE
-  summary: Pint meets attrs
   description: |
     The amazing attrs library is a game-changer when it comes to writing classes.
     Its initialisation sequence notably allows for automated conversion and
