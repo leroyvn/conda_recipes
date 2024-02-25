@@ -1,5 +1,5 @@
 {% set name = "pinttrs" %}
-{% set version = "23.1.1" %}
+{% set version = "24.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pinttrs-{{ version }}.tar.gz
-  sha256: 5790397a88531c06c588209da38ed42754e1bc640824020d6c8f3b9efdd73d53
+  sha256: 3ce9716e33b21594aa6950ea292596ce69035531c0a0aedb4d955aafb0a72091
 
 build:
   noarch: python
@@ -17,23 +17,24 @@ build:
 requirements:
   host:
     - python >=3.8
-    - pdm-pep517
+    - hatchling
     - pip
   run:
     - python >=3.8
-    - attrs >=21
+    - attrs >=21.3
     - pint >=0.16
 
 test:
   imports:
     - pinttr
+    - pinttrs
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://github.com/leroyvn/pinttrs
+  home: https://github.com/rayference/pinttrs
   doc_url: https://pinttrs.readthedocs.io
   license: MIT
   license_file: LICENSE
